@@ -40,6 +40,7 @@ const allowedOrigins = [
     'http://127.0.0.1:3000',
     'http://localhost:6969',
     'http://127.0.0.1:6969',
+    'https://booking-tour-ea8p.onrender.com/'
   ];
   app.use(cors());
 
