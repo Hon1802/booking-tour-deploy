@@ -1,0 +1,113 @@
+#tourList{
+    .container{
+        margin-top: 20px;
+        .header-wrapper{
+            box-shadow: var(--box-shadow);
+            padding: 1rem;
+        }
+        .box-container{
+            .tour-item{
+                background-color: white;
+                border-bottom: .3rem solid var(--color-hover);
+                border-bottom-right-radius: 6rem;
+                box-shadow: var(--box-shadow);
+                .content{
+                    padding: 1rem;
+                    .redirect-link{
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        word-break: break-word;
+                        width: 300px;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                        &:hover{
+                            a{
+                                color: var(--color-hover) !important
+                            }
+                        }          
+                    }
+                    .detail{
+                        align-items: center;
+                        display: flex;
+                        gap: 2rem;
+                        h3{
+                            align-items: center;
+                            display: flex;
+                            gap: 0.5rem;
+                            .icon{
+                                color: var(--color-hover);
+                                font-size: 1rem;
+                            }
+                            span{
+                                color: grey;
+                                font-size: 1rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }                
+                }
+                .image{
+                    height: 15rem;
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                        background-size: cover;
+                        width: 100%;
+                        transition: transform 3s;
+                    }
+                    &:hover{
+                        img{
+                            transform: scale(1.3);
+                        }
+                    }
+                }
+                .price{
+                    background: var(--secondary-color);
+                    border-bottom: .2rem solid var(--color-hover);
+                    border-bottom-right-radius: 1.5rem;
+                    color: white;   
+                    font-size: 20px;
+                    left: 0;
+                    padding: 1rem 1.5rem;
+                    position: absolute;
+                    top: 75%;
+                }
+            }
+        }
+    }  
+}
+
+@media only screen and (max-width: 600px) {
+    #tourList {
+        .container{
+            .box-container {
+                .tour-item {
+                    .content {
+                        .redirect-link {
+                            width: 100%;
+                            font-size: 15pt;
+                            -webkit-line-clamp: 3;
+                        }
+                        .detail {
+                            width: 90%;
+                            h3 span {
+                                font-size: 11pt;
+                            }
+                        }
+                    }
+                }
+            }
+            nav ul li {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+} 

@@ -1,0 +1,16 @@
+.MuiPagination-root{
+    li{
+        height: 50px;
+        width: 50px;
+        margin-right: 5px;
+        button{
+            height: 100% !important;
+            width: 100% !important;
+        }
+        
+    }
+    .Mui-selected{
+        background-color: var(--secondary-color)!important;
+        color: white
+    }
+}

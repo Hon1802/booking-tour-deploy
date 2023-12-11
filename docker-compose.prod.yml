@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+  node:
+    container_name: node_server
+    build: 
+      context: .
+      dockerfile: ./docker/Dockerfile.prod
+    # image: nguyenvanhontk4/back_end_travel
+    networks:
+      - common
+    environment:
+      PORT: 6969
+      MONGO_URI: mongodb://mongo/travel_db
+      SALT_ROUNDS: "kamenriderDECADE"
+      JWT_SECRET: "this is jwt serect"
+      REACT_APP_MONGO_URI : "mongodb://mongo/travel_db"
+      REACT_APP_SALT_ROUNDS : "kamenriderDECADE"
+      REACT_APP_JWT_SECRET : "this is jwt serect"
+      REACT_APP_BASE_URL : "http://127.0.0.1:80/"
+      CLIENT_ID_GG : '437123391042-16rthbohjej7caekcv334nc8knfvc10k.apps.googleusercontent.com'
+      CLIENT_SECRET_GG : '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'
+      CLIENT_URL : http://localhost:3000
+      CLIENT_ID : "AXN4esRA3q69_mdtY-DjbX_6vRujXSkf7Nsu-gBtKSBW52_iuPks4ugf1qYXbrrXg_-WAtYTpSFELskm"
+      CLIENT_SECRET : "ELs5iHo5NjQPk31SK86WuqiZ1jFwHI4HXLHkByEzY2W9JGXlDLiH2InfYeyF7VEVNzMwz33JkDtbThGV"
+      MODEL_PAYPAL : "sandbox"
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
+    networks:
+      - common
+  nginx: 
+    container_name: nginx
+    image: nginx
+    ports:
+      - 81:81
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+    networks:
+      - common
+    
+networks:
+  common: 

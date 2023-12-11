@@ -1,0 +1,21 @@
+{
+  "name": "project_capsule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix n.05-docker-mongo",
+    "install-client": "npm install --prefix n.04.bookingtour/BookingTour",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm start watch --prefix n.05-docker-mongo",
+    "client": "npm start --prefix n.04.bookingtour/BookingTour",
+    "watch": "concurrently \"npm start --prefix n.05-docker-mongo\" \"npm start --prefix n.04.bookingtour/BookingTour\"",
+    "deploy": "npm start build --prefix n.04.bookingtour/BookingTour && npm start --prefix n.05-docker-mongo",
+    "test": "npm start test --prefix n.05-docker-mongo && npm start test --prefix n.04.bookingtour/BookingTour"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

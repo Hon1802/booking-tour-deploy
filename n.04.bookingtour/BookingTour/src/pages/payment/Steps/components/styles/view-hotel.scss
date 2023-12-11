@@ -1,0 +1,43 @@
+
+    .tourDetail-wrapper{
+        position: relative;
+        width: 90vw;
+        align-items: center;
+        margin: auto auto;
+        display: flex;
+        margin-top: 40px;
+        .tourDetail-wrapper-left{
+            flex: 2;
+            img{
+              object-fit: cover;
+                width: 100%;
+                height: 455px;
+            }
+        }
+        .tourDetail-wrapper-right{
+            flex: 1;
+            background-color: var(--secondary-color);
+            min-height: 455px;
+            margin-left: 20px;           
+            .tourDetail-content-wrapper{
+               padding: 20px;
+                color: white;
+            }
+       
+        }
+       
+    }
+
+
+.service-wrapper{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    .service-list{
+        width: 60vw;
+        .service-icon{
+            margin-right: 10px;
+            color: green
+        }
+    }
+}

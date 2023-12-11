@@ -1,0 +1,56 @@
+#banner{
+    .banner-wrapper {
+        width: 100%;
+        margin-top: -7%;
+        height: 70vh;
+        position: relative;
+        background-size: cover;
+        height: auto;
+        img{     
+            object-fit: cover; 
+            height: 100%;
+            width: 100%;
+        }
+        .banner-title{
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            color: white        
+        }
+        .banner-overlay{   
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            opacity: 0.4;
+            background-color: black;
+            z-index: 0;
+        }
+        h2{
+            font-size: 60px;
+        }
+        .banner-content{
+            text-align: center;
+            z-index: 3;
+            top: -40%;
+            color: white
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #banner{
+        .banner-wrapper {
+            height: 101vh;
+            margin-top: -9vh;
+        }
+        .banner-title h2{
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+ }
+
+
+

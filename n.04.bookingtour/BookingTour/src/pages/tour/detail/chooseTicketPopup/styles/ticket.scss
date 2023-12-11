@@ -1,0 +1,17 @@
+.ticket-box{
+    label{
+        width: 150px;
+    }   
+    button{
+        width: 50px!important;
+        height: 58px !important;
+        border-radius: 50%!important;
+    }
+} 
+
+.react-datepicker-wrapper{
+    // width: 100%;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+}

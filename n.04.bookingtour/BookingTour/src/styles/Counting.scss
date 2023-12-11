@@ -1,0 +1,40 @@
+#counting {
+  margin-top: 80px;
+  min-height: 300px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    opacity: 0.3;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    text-align: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+  .counting-icon{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #counting {
+    min-height: 101vh;
+    background-size: auto 102vh;
+    background-attachment: scroll;
+  }
+}

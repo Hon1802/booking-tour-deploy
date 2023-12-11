@@ -1,0 +1,9 @@
+export const img1 = require("./image1.jpg.webp");
+export const img2 = require("./image2.jpg.webp");
+export const img3 = require("./image3.jpg.webp");
+export const img4 = require("./image4.jpg.webp");
+export const img6 = require("./image6.jpg");
+export const img7 = require("./image7.jpg");
+export const img8 = require("./image8.jpg");
+export const img9 = require("./image9.jpg");
+export const counting = require("./Hire_me_bg.webp");
