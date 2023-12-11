@@ -7,4 +7,4 @@ COPY n.05-docker-mongo/package.json n.05-docker-mongo/package-lock.json ./
 RUN npm install -g concurrently
 COPY . .
 RUN npm run watch
-CMD [ "yarn","start" ]
+CMD [ "npm","start" ]
