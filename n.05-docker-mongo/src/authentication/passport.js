@@ -6,8 +6,8 @@ const CLIENT_SECRET_GG = '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';
 passport.use(
 	new GoogleStrategy(
 		{
-			clientID: process.env.CLIENT_ID_GG,
-			clientSecret: process.env.CLIENT_SECRET_GG,
+			clientID: CLIENT_ID_GG,
+			clientSecret: CLIENT_SECRET_GG,
 			callbackURL: "/auth/google/callback",
 			scope: ["profile", "email"],
 		},
