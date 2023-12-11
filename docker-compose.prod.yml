@@ -10,10 +10,10 @@ services:
       - common
     environment:
       PORT: 6969
-      MONGO_URI: mongodb://mongo/travel_db
+      MONGO_URI: "mongodb+srv://admin123:12345@atlascluster.opryj2k.mongodb.net/"
       SALT_ROUNDS: "kamenriderDECADE"
       JWT_SECRET: "this is jwt serect"
-      REACT_APP_MONGO_URI : "mongodb://mongo/travel_db"
+      REACT_APP_MONGO_URI : "mongodb+srv://admin123:12345@atlascluster.opryj2k.mongodb.net/"
       REACT_APP_SALT_ROUNDS : "kamenriderDECADE"
       REACT_APP_JWT_SECRET : "this is jwt serect"
       REACT_APP_BASE_URL : "http://127.0.0.1:80/"
