@@ -2,6 +2,7 @@
   "name": "tour-ecommerce",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "proxy": "http://localhost:6969",
   "dependencies": {
     "@emotion/react": "^11.11.1",

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 // ** Reactstrap Imports
 import { Button } from "reactstrap"
 import source from "../../assets/error.svg"
-const PageNotFound = () => {
+export const PageNotFound = () => {
 
     return (
         <div className="misc-wrapper">
@@ -26,4 +26,3 @@ const PageNotFound = () => {
         </div>
     )
 }
-export default PageNotFound

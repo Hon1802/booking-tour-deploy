@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.js';
 import "./styles/style.scss"
-import { store } from './redux/storeConfig/store'
+import { store } from './redux/storeConfig/store.js'
 import { Provider } from 'react-redux'
 // ** Toast
 import { Toaster } from 'react-hot-toast'

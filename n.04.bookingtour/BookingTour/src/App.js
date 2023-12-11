@@ -7,9 +7,9 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 
-import PageNotFound from "./pages/404"
-import Layout from './components/layout/Layout';
-import routes from "./routes"
+import {PageNotFound} from "./pages/404/index.js"
+import {Layout} from './components/layout/Layout.js';
+import routes from "./routes/index.js"
 function App() {
   const router = createBrowserRouter([
     {
