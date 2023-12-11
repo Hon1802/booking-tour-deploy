@@ -5,7 +5,9 @@ COPY package.json package-lock.json ./
 COPY n.04.bookingtour/BookingTour/package.json n.04.bookingtour/BookingTour/package-lock.json ./
 COPY n.05-docker-mongo/package.json n.05-docker-mongo/package-lock.json ./
 RUN npm install -g concurrently
-RUN cd n.04.bookingtour/BookingTour npm install -g react-scripts
+WORKDIR /app/n.04.bookingtour/BookingTour
+RUN npm install -g react-scripts
+WORKDIR /app
 RUN npm install
 COPY . .
 RUN npm run watch
