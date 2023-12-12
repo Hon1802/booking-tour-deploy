@@ -3,29 +3,13 @@
   "builds": [
     {
       "src": "./src/server.js",
-      "use": "@now/node"
-    },
-    {
-      "src": "src/router/web.js",
-      "use": "@now/node"
-    },
-    {
-      "src": "src/router/auth.js",
-      "use": "@now/node"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/router/web/(.*)",
-      "dest": "src/router/web.js"
-    },
-    {
-      "src": "/router/auth/(.*)",
-      "dest": "src/router/auth.js"
-    },
-    {
       "src": "/(.*)",
-      "dest": "src/server.js"
+      "dest": "src/"
     }
   ]
 }
